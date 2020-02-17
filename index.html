@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id='app'>
+
+    </div>
+</body>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script src="https://unpkg.com/react@16.7.0/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js"></script>
+<script type="text/babel">
+
+
+    function Header(props) {
+        return (
+            <header>
+                <h1>{props.name}</h1>
+                <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg"
+                    alt="Picture of Sally Student" />
+                <p>Talented individual, in search of career opportunities in web development</p>
+            </header>
+        );
+    };
+
+    function Contact() {
+        return (
+
+            <address>
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>Phone: 555-645-5467</li>
+                    <li>Email: <a href="sally.student@example.com">sally.student@example.com</a></li>
+                </ul>
+            </address>
+        );
+    };
+
+    function Education() {
+        return (
+            <section>
+                <h2>Education</h2>
+                <ul>
+                    <li>Thinkful-Engineering Flex Program</li>
+                    <li>Western State College, '09-'13</li>
+                    <li>Western State High School, '05-'09</li>
+                </ul>
+            </section>
+        );
+    };
+
+    function Employment() {
+        return (
+            <section>
+                <h2>Job History</h2>
+                <ul>
+                    <li>Hodgepodge Inc.-Staff Coordinator, 2013-Current<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veritatis sed laborum, accusantium ut dolore asperiores ea enim, hic fuga corporis? Id cupiditate, voluptatibus veniam doloribus consectetur quia! Quae, eveniet?</p></li>
+                    <li>Keystone Cafe -Server, 2008-2013<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veritatis sed laborum, accusantium ut dolore asperiores ea enim, hic fuga corporis? Id cupiditate, voluptatibus veniam doloribus consectetur quia! Quae, eveniet?</p></li>
+                </ul>
+            </section>
+        );
+    };
+
+    function App() {
+        return(
+            <main>
+                <Header name='Sally Student'/> 
+                <Contact />
+                <Employment />
+                <Education />
+                </main>
+        )
+    }
+
+    ReactDOM.render(
+        <App />
+        , document.querySelector('#app')
+    );
+
+
+
+
+</script>
+
+</html>
